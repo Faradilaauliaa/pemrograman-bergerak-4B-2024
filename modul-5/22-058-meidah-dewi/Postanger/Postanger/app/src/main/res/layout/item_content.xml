@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profil1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/people_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Janny Wilson"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/profil"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/people_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/id1"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/profil"
+            app:layout_constraintTop_toBottomOf="@+id/people_name" />
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu" />
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/item_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:text="Community Event!!"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/profil"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/profil" />-->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_description"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/deskripsi1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/profil"
+            app:layout_constraintTop_toBottomOf="@+id/profil" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Just Now"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/item_description"
+            app:layout_constraintTop_toBottomOf="@+id/item_description" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="344dp"
+            android:layout_height="201dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/item_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/content1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity=""
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+            <!--wrapper-->
+            <LinearLayout
+                android:id="@+id/btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_like"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="1dp"
+                    android:text="20"
+                    android:textSize="14dp" />
+            </LinearLayout>
+            <!--wrapper-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="1dp"
+                    android:text="12"
+                    android:textSize="14dp" />
+            </LinearLayout>
+            <!--wrapper-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_share"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@drawable/share" />
+
+                <ImageView
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/bookmark" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

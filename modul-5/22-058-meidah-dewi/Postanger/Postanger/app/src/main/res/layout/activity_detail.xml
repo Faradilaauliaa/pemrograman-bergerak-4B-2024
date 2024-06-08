@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/black"
+        android:text="Ubud’s Hotel"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ButtonShare"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/nama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nama"
+        app:srcCompat="@drawable/share" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/nama"
+        app:layout_constraintStart_toStartOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/nama">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/gambar"
+            android:layout_width="314dp"
+            android:layout_height="202dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/content1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/deskripsi"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:textColor="@color/black"
+        android:text="Creating a sustainable lifestyle is a meaningful journey and requires the active involvement of every individual. One practical step that can be taken is to understand the impact of every daily action on the environment and look for ways to reduce our ecological footprint. This can start from small decisions such as reducing the use of single-use plastics, choosing eco-friendly products, or recycling waste.
+The second step that can be taken is to adopt a more thoughtful consumption pattern. This involves choosing products that are durable and recyclable, and avoiding waste. Understanding the life cycle of products, from production to disposal, helps us make more conscious and sustainable choices. In addition, supporting manufacturers and brands that are committed to environmentally friendly production and distribution practices can also have a big impact."
+        android:justificationMode="inter_word"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
